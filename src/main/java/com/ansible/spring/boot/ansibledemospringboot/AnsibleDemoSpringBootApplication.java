@@ -1,5 +1,6 @@
 package com.ansible.spring.boot.ansibledemospringboot;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,12 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
         ignoreResourceNotFound = true)
 @RestController
 public class AnsibleDemoSpringBootApplication {
+    private static Logger log = Logger.getLogger(AnsibleDemoSpringBootApplication.class);
 
     @Value("${movie.name}")
     private String movieName;
 
     @RequestMapping("/")
     public String index() {
+        log.info("Movie Name is: " + movieName);
         return movieName;
     }
 
