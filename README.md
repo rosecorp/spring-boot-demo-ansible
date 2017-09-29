@@ -1,4 +1,4 @@
-# Spring boot log4j rolling and archiving
+# Spring boot log4j rolling and archiving [![Build Status](https://travis-ci.org/rosecorp/spring-boot-demo-ansible.svg?branch=master)](https://travis-ci.org/rosecorp/spring-boot-demo-ansible)
 
 ###
 Example description
