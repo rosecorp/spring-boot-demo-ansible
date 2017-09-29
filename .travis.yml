@@ -7,3 +7,11 @@ addons:
   apt:
     packages:
       - oracle-java8-installer
+
+deploy:
+  provider: releases
+  api_key: "f02072fc306801a2c12fd3ae2a729572c8f86b79"
+  file: "ansible-demo-spring-boot-0.0.1-SNAPSHOT.jar"
+  skip_cleanup: true
+  on:
+    tags: true
