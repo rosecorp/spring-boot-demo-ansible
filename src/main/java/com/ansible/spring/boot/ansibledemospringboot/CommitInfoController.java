@@ -20,12 +20,20 @@ public class CommitInfoController {
     @Value("${git.commit.id}")
     private String commitId;
 
+    @Value(("${appVersion}"))
+    private String appVersion;
+
+    @Value(("${artifactId}"))
+    private String artifactId;
+
     @RequestMapping("/versions")
     public Map<String, String> getCommitId() {
         Map<String, String> result = new HashMap<>();
         result.put("Commit message",commitMessage);
         result.put("Commit branch", branch);
         result.put("Commit id", commitId);
+        result.put("Artifact id", artifactId);
+        result.put("Application version", appVersion);
         return result;
     }
 
